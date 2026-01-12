@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-neo-primary: #6E44FF;
+    --color-neo-secondary: #B892FF;
+    --color-neo-accent: #FF44B4;
+    --color-neo-dark: #0A0A1A;
+    --color-neo-light: #F0F0FF;
+
+    --gradient-start: var(--color-neo-primary);
+    --gradient-middle: var(--color-neo-secondary);
+    --gradient-end: var(--color-neo-accent);
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+    }
+
+    @keyframes gradient-x {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+    }
+
+    @keyframes blob {
+        0% { transform: translate(0,0) scale(1); }
+        33% { transform: translate(30px,-50px) scale(1.1); }
+        66% { transform: translate(-20px,20px) scale(0.9); }
+        100% { transform: translate(0,0) scale(1); }
+    }
+
+    @keyframes blob {
+        0% { transform: translate(0,0) scale(1); }
+        33% { transform: translate(30px,-50px) scale(1.1); }
+        66% { transform: translate(-20px,20px) scale(0.9); }
+        100% { transform: translate(0,0) scale(1); }
+    }
+
+    @keyframes shine {
+        0% { transform: translateX(-100%) rotate(30deg); }
+        100% { transform: translateX(100%) rotate(30deg); }
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    --animate-float: float 8s ease-in-out infinite;
+    --animate-gradient-x: gradient-x 8s ease infinite;
+    --animate-blob: blob 12s infinite;
+    --animate-shine: shine 6s infinite;
+    --animate-fadeIn: fadeIn 0.5s ease-in;
+}
+
+html.dark {
+    --gradient-start: #FF44B4;
+    --gradient-middle: #6E44FF;
+    --gradient-end: #B892FF;
+    background-color: var(--color-neo-dark);
+    color: var(--color-neo-light);
+}
+
+html.light {
+    background-color: var(--color-neo-light);
+    color: var(--color-neo-dark);
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+
+
