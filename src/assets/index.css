@@ -1,21 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
-/* =========================
-   THEME / DESIGN TOKENS
-========================= */
-
+/* -----------------------------------------
+   THEME (Tailwind v4 official system)
+----------------------------------------- */
 @theme {
+  /* Colors */
   --color-neo-primary: #6E44FF;
   --color-neo-secondary: #B892FF;
   --color-neo-accent: #FF44B4;
   --color-neo-dark: #0A0A1A;
   --color-neo-light: #F0F0FF;
 
+  /* Gradient variables */
   --gradient-start: var(--color-neo-primary);
   --gradient-middle: var(--color-neo-secondary);
   --gradient-end: var(--color-neo-accent);
 
+  /* Keyframes */
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }
@@ -43,6 +45,7 @@
     100% { opacity: 1; transform: translateY(0); }
   }
 
+  /* Animations */
   --animate-float: float 8s ease-in-out infinite;
   --animate-gradient-x: gradient-x 8s ease infinite;
   --animate-blob: blob 12s infinite;
@@ -50,22 +53,14 @@
   --animate-fadeIn: fadeIn 0.5s ease-in;
 }
 
-/* =========================
-   CUSTOM UTILITIES (MUST COME FIRST)
-========================= */
-
-@utility bg-size-200 {
-  background-size: 200% 200%;
-}
-
-/* =========================
-   BASE
-========================= */
-
+/* -----------------------------------------
+   DARK MODE GRADIENT OVERRIDES
+----------------------------------------- */
 html.dark {
   --gradient-start: #FF44B4;
   --gradient-middle: #6E44FF;
   --gradient-end: #B892FF;
+
   background-color: var(--color-neo-dark);
   color: var(--color-neo-light);
 }
@@ -75,14 +70,18 @@ html.light {
   color: var(--color-neo-dark);
 }
 
+/* -----------------------------------------
+   BASE STYLES
+----------------------------------------- */
 body {
   font-family: 'Space Grotesk', sans-serif;
 }
 
-/* =========================
-   GLASS EFFECTS
-========================= */
+/* -----------------------------------------
+   COMPONENTS
+----------------------------------------- */
 
+/* Glass Card */
 .glass {
   @apply bg-white/10 dark:bg-gray-900/40 backdrop-blur-md border border-white/20 dark:border-gray-700/30;
 }
@@ -91,10 +90,7 @@ body {
   @apply bg-white/80 backdrop-blur-md border border-gray-200;
 }
 
-/* =========================
-   GRADIENT TEXT
-========================= */
-
+/* Gradient Text / Background */
 .gradient-text {
   @apply bg-clip-text text-transparent bg-size-200;
   background-image: linear-gradient(
@@ -106,10 +102,7 @@ body {
   animation: var(--animate-gradient-x);
 }
 
-/* =========================
-   NEO BUTTON
-========================= */
-
+/* Neo Button */
 .neo-btn {
   @apply text-white font-bold shadow-lg transition-all duration-300 hover:-translate-y-1;
   background: linear-gradient(
@@ -120,10 +113,7 @@ body {
   box-shadow: 0 0 20px color-mix(in srgb, var(--gradient-start), transparent 70%);
 }
 
-/* =========================
-   HOLOGRAPHIC EFFECT
-========================= */
-
+/* Holographic Effect */
 .holographic {
   @apply relative overflow-hidden;
   background: linear-gradient(
@@ -147,9 +137,7 @@ body {
   animation: var(--animate-shine);
 }
 
-/* =========================
-   GRID PATTERN
-========================= */
+/* Grid Pattern */
 
 .grid-pattern {
   background-color: #F0F0FF;
@@ -165,6 +153,17 @@ html.dark .grid-pattern {
   background-image:
     linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-  color: var(--color-text);
+    color: var(--color-text);
 }
 
+
+/* -----------------------------------------
+   UTILITIES
+----------------------------------------- */
+@utility bg-size-200 {
+  background-size: 200% 200%;
+}
+
+@utility rotate-30 {
+  transform: rotate(30deg);
+}
