@@ -1,17 +1,21 @@
 import { useEffect } from "react"
 import { initTheme } from "./utils/theme"
-import AnimatedBackground from "./components/AnimatedBackground";
+import Header from "./components/Header"
+import AnimatedBackground from "./components/AnimatedBackground"
 
 function App() {
-
   useEffect(() => {
-    initTheme();
-  },[])
+    initTheme()
+  }, [])
 
   return (
-    <div className="min-h-screen grid-pattern">
-      <AnimatedBackground/>
-    </div>
+    <>
+      <Header />
+
+      <div className="min-h-screen grid-pattern relative">
+        <AnimatedBackground />
+      </div>
+    </>
   )
 }
 
