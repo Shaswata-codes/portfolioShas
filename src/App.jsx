@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { initTheme } from "./utils/theme"
 import Header from "./components/Header"
 import AnimatedBackground from "./components/AnimatedBackground"
+import Hero from "./components/Hero"
 
 function App() {
   useEffect(() => {
@@ -12,8 +13,12 @@ function App() {
     <>
       <Header />
 
-      <div className="min-h-screen grid-pattern relative">
+      <div className="relative min-h-screen grid-pattern">
         <AnimatedBackground />
+        <Header />
+        <main>
+          <Hero />
+        </main>
       </div>
     </>
   )
