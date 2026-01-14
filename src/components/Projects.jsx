@@ -3,102 +3,104 @@ import { motion } from 'framer-motion';
 import { projects } from '../assets/assets';
 
 const Projects = () => {
-
-  // ✅ Container animation (stagger)
   const containerVariants = {
-    hidden: {},
+    hidden: { opacity: 0 },
     show: {
+      opacity: 1,
       transition: {
-        staggerChildren: 0.15
-      }
-    }
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
   };
 
-  // ✅ Card animation
   const cardVariants = {
     hidden: {
       opacity: 0,
-      y: 60
+      y: 80,
+      scale: 0.9,
     },
     show: {
       opacity: 1,
       y: 0,
+      scale: 1,
       transition: {
-        duration: 0.6,
-        ease: 'easeOut'
-      }
-    }
-  };
-
-  // ✅ Optional hover variants (safe)
-  const linkedVariants = {
-    hover: {
-      x: 6,
-      transition: {
-        type: 'spring',
-        stiffness: 300
-      }
-    }
-  };
-
-  const buttonVariants = {
-    hover: {
-      scale: 1.06,
-      transition: {
-        type: 'spring',
-        stiffness: 300
-      }
-    }
+        duration: 0.7,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
   };
 
   return (
-    <section id="projects" className="relative z-10 py-16 md:py-20">
-      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <section
+      id="projects"
+      className="min-h-screen px-6 py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950"
+    >
+      <div className="mx-auto max-w-7xl">
 
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: false }}
-          className="mb-12 text-center md:mb-16"
+          className="mb-20 text-center"
         >
-          <span className="inline-block px-4 py-2 mb-4 font-medium rounded-full glass dark:glass text-neo-secondary">
-            SELECTED WORK
+          <span className="block mb-4 text-sm font-semibold tracking-widest text-purple-400 uppercase">
+            Selected Work
           </span>
 
-          <h2 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl">
-            <span className="gradient-text">Innovative Projects</span>
+          <h2 className="mb-4 text-6xl font-bold tracking-tight text-white md:text-7xl">
+            Innovative Projects
           </h2>
 
-          <p className="max-w-3xl mx-auto text-lg sm:text-xl">
+          <div className="w-32 h-1 mx-auto mb-6 bg-gradient-to-r from-purple-500 to-pink-500" />
+
+          <p className="max-w-2xl mx-auto text-lg text-slate-400">
             Cutting-edge digital experiences that push boundaries and deliver results
           </p>
         </motion.div>
 
         {/* Projects Grid */}
         <motion.div
-          className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, margin: '-100px' }}
+          className="grid grid-cols-1 gap-8 md:grid-cols-2"
         >
-          {projects.map(project => (
+          {projects.map((project) => (
             <motion.div
               key={project.id}
               variants={cardVariants}
-              whileHover="hover"
-              className="relative overflow-hidden shadow-lg h-80 md:h-96 rounded-3xl glass dark:glass"
+              className="relative overflow-hidden border group rounded-2xl bg-slate-800/50 backdrop-blur-sm border-slate-700/50 hover:border-purple-500/50"
             >
-              {/* project content here */}
-              <div>
-                
+              <div className="relative overflow-hidden h-72">
+                <motion.img
+                  src={project.image}
+                  alt={project.title}
+                  className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent group-hover:opacity-100" />
               </div>
-              <motion.img
-              src={project.image} alt={project.title} className='object-cover w-full h-full'
-              whileHover={{scale:1.12}}
-              transition={{duration:0.6}}/>
+
+              <div className="p-8">
+                <h3 className="mb-3 text-3xl font-bold text-white transition-colors group-hover:text-purple-300">
+                  {project.title}
+                </h3>
+
+                <motion.a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ x: 6 }}
+                  className="flex items-center gap-2 font-semibold text-purple-400"
+                >
+                View Project →
+              </motion.a>
+
+
+              </div>
             </motion.div>
           ))}
         </motion.div>

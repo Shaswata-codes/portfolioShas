@@ -14,41 +14,72 @@ import project6Img from '../assets/project6.png';
 
 // Assets
 export const assets = {
-  profileImg,
+    profileImg,
 };
 
 // Navigation
 export const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: '#home' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'About', href: '#about' },
+    { label: 'Contact', href: '#contact' },
 ];
 
 // Social links
 export const socialPlatforms = [
-  { icon: FaTwitter, href: '#' },
-  { icon: FaGithub, href: '#' },
-  { icon: FaLinkedinIn, href: '#' },
-  { icon: FaDribbble, href: '#' },
+    { icon: FaTwitter, href: '#' },
+    { icon: FaGithub, href: '#' },
+    { icon: FaLinkedinIn, href: '#' },
+    { icon: FaDribbble, href: '#' },
 ];
 
 // Projects
 export const projects = [
-  { id: 1, title: 'Project One', image: project1Img },
-  { id: 2, title: 'Project Two', image: project2Img },
-  { id: 3, title: 'Project Three', image: project3Img },
-  { id: 4, title: 'Project Four', image: project4Img },
-  { id: 5, title: 'Project Five', image: project5Img },
-  { id: 6, title: 'Project Six', image: project6Img },
+  {
+    id: 1,
+    title: 'Real Time Chat App',
+    image: project1Img,
+    link: 'https://github.com/Shaswata-codes/Chat-App'
+  },
+  {
+    id: 2,
+    title: 'Edu Portal',
+    image: project2Img,
+    link: 'https://github.com/Shaswata-codes/EduPortal'
+  },
+  {
+    id: 3,
+    title: 'Blog App',
+    image: project3Img,
+    link: 'https://github.com/Shaswata-codes/Chat-App'
+  },
+  {
+    id: 4,
+    title: 'MERN AUTH',
+    image: project4Img,
+    link: 'https://github.com/Shaswata-codes/Authentication-using-MERN'
+  },
+  {
+    id: 5,
+    title: 'Youtube AdBlocker Extension',
+    image: project5Img,
+    link: 'https://github.com/Shaswata-codes/Youtube-Add-Blocker-Extension'
+  },
+  {
+    id: 6,
+    title: 'Tab Changer Extension',
+    image: project6Img,
+    link: 'https://github.com/Shaswata-codes/Tab-Media-Pauser-Extension'
+  },
 ];
+
 
 // Skills
 export const skills = [
-  { id: 1, title: 'UI/UX Design', icon: FiMonitor },
-  { id: 2, title: 'Frontend Dev', icon: FiCpu },
-  { id: 3, title: 'Backend Dev', icon: FiLayers },
-  { id: 4, title: 'Mobile Dev', icon: FiSmartphone },
-  { id: 5, title: 'DevOps', icon: FiSettings },
+    { id: 1, title: 'UI/UX Design', icon: FiMonitor },
+    { id: 2, title: 'Frontend Dev', icon: FiCpu },
+    { id: 3, title: 'Backend Dev', icon: FiLayers },
+    { id: 4, title: 'Mobile Dev', icon: FiSmartphone },
+    { id: 5, title: 'DevOps', icon: FiSettings },
 ];

@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
-/* =========================
-   THEME / DESIGN TOKENS
-========================= */
+html {
+  scroll-behavior: smooth;
+}
+
+#projects {
+  scroll-margin-top: 100px;
+}
 
 @theme {
   --color-neo-primary: #6E44FF;
@@ -84,11 +88,11 @@ body {
 ========================= */
 
 .glass {
-  @apply bg-white/10 dark:bg-gray-900/40 backdrop-blur-md border border-white/20 dark:border-gray-700/30;
+  @apply border bg-white/10 dark:bg-gray-900/40 backdrop-blur-md border-white/20 dark:border-gray-700/30;
 }
 
 .glass-light {
-  @apply bg-white/80 backdrop-blur-md border border-gray-200;
+  @apply border border-gray-200 bg-white/80 backdrop-blur-md;
 }
 
 /* =========================
@@ -96,7 +100,7 @@ body {
 ========================= */
 
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-size-200;
+  @apply text-transparent bg-clip-text bg-size-200;
   background-image: linear-gradient(
     to right,
     var(--gradient-start),
@@ -111,7 +115,7 @@ body {
 ========================= */
 
 .neo-btn {
-  @apply text-white font-bold shadow-lg transition-all duration-300 hover:-translate-y-1;
+  @apply font-bold text-white transition-all duration-300 shadow-lg hover:-translate-y-1;
   background: linear-gradient(
     to bottom right,
     var(--gradient-start),
