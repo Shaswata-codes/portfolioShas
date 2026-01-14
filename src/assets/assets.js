@@ -1,7 +1,7 @@
 import { FaDribbble, FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import brightMatterImg from '../assets/Brigthmatter.png'
 import brightImg from '../assets/bright.png'
-import profileImg from '../assets/profile.avif';
+import profileImg from '../assets/profile.jpeg';
 import project1Img from '../assets/project1.avif';
 import project2Img from '../assets/project2.avif';
 import project3Img from '../assets/project3.avif';

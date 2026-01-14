@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaArrowRight, FaCommentDots, FaGithub, FaLinkedin, FaTwitter, FaDribbble } from 'react-icons/fa'
+import { assets } from '../assets/assets'
 
 // Mock social platforms data - replace with your actual import
 const socialPlatforms = [
@@ -60,7 +61,7 @@ const Hero = () => {
       </motion.div>
 
       <div className='relative px-4 py-20 mx-auto max-w-7xl sm:px-6 lg:px-8'>
-        <div className='grid items-center grid-cols-1 gap-16 lg:grid-cols-2'>
+        <div className='grid items-center grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16'>
           {/* LEFT PART */}
           <motion.div
             className='order-2 text-center lg:order-1 lg:text-left'
@@ -195,6 +196,114 @@ const Hero = () => {
                 }}
               />
             </motion.div>
+          </motion.div>
+
+          {/* RIGHT PART - Profile Image */}
+          <motion.div
+            className='relative flex items-center justify-center order-1 lg:order-2'
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            {/* Animated ring orbits */}
+            <motion.div
+              className='absolute inset-0 flex items-center justify-center'
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            >
+              <div className='w-[380px] h-[380px] md:w-[480px] md:h-[480px] rounded-full border-2 border-dashed border-neo-primary/30'></div>
+            </motion.div>
+
+            <motion.div
+              className='absolute inset-0 flex items-center justify-center'
+              animate={{ rotate: -360 }}
+              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+            >
+              <div className='w-[420px] h-[420px] md:w-[520px] md:h-[520px] rounded-full border border-purple-500/20'></div>
+            </motion.div>
+
+            {/* Floating decorative dots */}
+            <motion.div
+              className='absolute top-0 right-0 w-4 h-4 rounded-full bg-neo-primary'
+              animate={{
+                y: [0, -20, 0],
+                opacity: [0.5, 1, 0.5]
+              }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            />
+            <motion.div
+              className='absolute bottom-0 left-0 w-3 h-3 bg-purple-500 rounded-full'
+              animate={{
+                y: [0, 20, 0],
+                opacity: [0.5, 1, 0.5]
+              }}
+              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            />
+            <motion.div
+              className='absolute left-0 w-2 h-2 bg-pink-500 rounded-full top-1/4'
+              animate={{
+                x: [0, -15, 0],
+                opacity: [0.5, 1, 0.5]
+              }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            />
+
+            {/* Main profile container */}
+            <motion.div
+              className='relative z-10'
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              {/* Gradient glow background */}
+              <motion.div
+                className='absolute inset-0 rounded-full bg-gradient-to-br from-neo-primary via-purple-500 to-pink-500 blur-2xl opacity-40'
+                animate={{
+                  scale: [1, 1.1, 1],
+                  opacity: [0.4, 0.6, 0.4]
+                }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              />
+
+              {/* Profile image wrapper */}
+              <div className='relative w-[320px] h-[320px] md:w-[400px] md:h-[400px]'>
+                {/* Multi-layer border effect */}
+                <div className='absolute inset-0 p-1 rounded-full bg-gradient-to-br from-neo-primary via-purple-500 to-pink-500'>
+                  <div className='w-full h-full p-2 bg-white rounded-full dark:bg-gray-900'>
+                    <div className='relative w-full h-full overflow-hidden border-4 rounded-full shadow-2xl border-white/50 dark:border-gray-800/50'>
+                      <img
+                        src={assets.profileImg}
+                        alt="Profile"
+                        className='object-cover w-full h-full'
+                      />
+                      {/* Overlay gradient on hover */}
+                      <motion.div
+                        className='absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-br from-neo-primary/20 to-purple-600/20 hover:opacity-100'
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                
+              
+              </div>
+            </motion.div>
+
+            {/* Corner decorative elements */}
+            <motion.div
+              className='absolute w-20 h-20 border-t-4 border-l-4 rounded-tl-3xl top-8 left-8 border-neo-primary/30'
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              viewport={{ once: false, amount: 0.3 }}
+            />
+            <motion.div
+              className='absolute w-20 h-20 border-b-4 border-r-4 rounded-br-3xl bottom-8 right-8 border-purple-500/30'
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.7, duration: 0.6 }}
+              viewport={{ once: false, amount: 0.3 }}
+            />
           </motion.div>
         </div>
       </div>
