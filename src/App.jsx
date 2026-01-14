@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import AnimatedBackground from "./components/AnimatedBackground";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
         <main>
           <Hero />
           <Projects />
+          <Skills />
         </main>
       </div>
     </>
