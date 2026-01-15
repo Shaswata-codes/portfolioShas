@@ -220,12 +220,18 @@ const About = () => {
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
             <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 40px rgba(255,255,255,0.3)" }}
-              whileTap={{ scale: 0.95 }}
-              className="px-10 py-4 text-lg font-bold text-purple-600 transition-all duration-300 bg-white rounded-full shadow-lg hover:bg-purple-50"
-            >
-              Get In Touch
-            </motion.button>
+  onClick={() => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }}
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  className="px-8 py-4 font-semibold text-white transition-shadow rounded-full shadow-lg bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-xl"
+>
+  Get In Touch
+</motion.button>
           </motion.div>
         </motion.div>
       </div>

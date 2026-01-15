@@ -38,9 +38,9 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: FaGithub, link: 'https://github.com/Shaswata-codes', label: 'GitHub', color: '#181717' },
-    { icon: FaLinkedin, link: 'https://linkedin.com/in/yourusername', label: 'LinkedIn', color: '#0A66C2' },
+    { icon: FaLinkedin, link: 'https://www.linkedin.com/in/shaswatasarkar/', label: 'LinkedIn', color: '#0A66C2' },
     { icon: FaTwitter, link: 'https://twitter.com/yourusername', label: 'Twitter', color: '#1DA1F2' },
-    { icon: FaInstagram, link: 'https://instagram.com/yourusername', label: 'Instagram', color: '#E4405F' }
+    { icon: FaInstagram, link: 'https://www.instagram.com/sarkar_shas/', label: 'Instagram', color: '#E4405F' }
   ];
 
   const handleChange = (e) => {
@@ -263,7 +263,7 @@ const Contact = () => {
                     required
                     whileFocus={{ scale: 1.01 }}
                     className="w-full px-5 py-4 text-white transition-all duration-300 border rounded-xl bg-slate-900/50 border-slate-600 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
-                    placeholder="John Doe"
+                    placeholder=""
                   />
                 </div>
 
@@ -283,7 +283,7 @@ const Contact = () => {
                     required
                     whileFocus={{ scale: 1.01 }}
                     className="w-full px-5 py-4 text-white transition-all duration-300 border rounded-xl bg-slate-900/50 border-slate-600 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
-                    placeholder="john@example.com"
+                    placeholder=""
                   />
                 </div>
 
