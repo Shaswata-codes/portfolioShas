@@ -51,15 +51,25 @@ portfolioshaswata/
 ├── src/
 
 │   ├── components/     # Reusable UI components
+
 │   ├── pages/          # Page-level components
+
 │   ├── assets/         # Images, animations, icons
+
 │   ├── routes/         # Route configuration
+
 │   ├── App.jsx
+
 │   └── main.jsx
+
 ├── public/
+
 ├── package.json
+
 ├── tailwind.config.js
+
 ├── vite.config.js
+
 └── README.md
 
 ⚙️ Installation & Setup
