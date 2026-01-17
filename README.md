@@ -47,7 +47,9 @@ SWC (Fast React compiler)
 
 📂 Project Structure
 portfolioshaswata/
+
 ├── src/
+
 │   ├── components/     # Reusable UI components
 │   ├── pages/          # Page-level components
 │   ├── assets/         # Images, animations, icons
