@@ -1,16 +1,137 @@
-# React + Vite
+🚀 Shaswata Sarkar – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and animated personal portfolio website built to showcase my projects, skills, and experience as a full-stack developer.
+Designed with performance, accessibility, and clean UI/UX in mind.
 
-Currently, two official plugins are available:
+🔗 Live Demo: https://portfolio-shas.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Features
 
-## React Compiler
+⚡ Fast & Lightweight – Powered by Vite
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+🎨 Modern UI – Styled with Tailwind CSS
 
-## Expanding the ESLint configuration
+🎬 Smooth Animations – Framer Motion for transitions and interactions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🧭 Client-side Routing – React Router
+
+📱 Fully Responsive – Works across all screen sizes
+
+🧩 Reusable Components – Clean and scalable architecture
+
+🎯 Developer-Focused – Showcases real projects and skills
+
+🛠️ Tech Stack
+
+Frontend
+
+React 19
+
+React Router DOM
+
+Tailwind CSS
+
+Framer Motion
+
+React Icons
+
+Lottie Animations
+
+Tooling
+
+Vite
+
+ESLint
+
+SWC (Fast React compiler)
+
+📂 Project Structure
+portfolioshaswata/
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── pages/          # Page-level components
+│   ├── assets/         # Images, animations, icons
+│   ├── routes/         # Route configuration
+│   ├── App.jsx
+│   └── main.jsx
+├── public/
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
+
+⚙️ Installation & Setup
+
+Clone the repository:
+
+git clone https://github.com/Shaswata-codes/portfolioShas.git
+cd portfolioShas
+
+
+Install dependencies:
+
+npm install
+
+
+Run the development server:
+
+npm run dev
+
+
+Build for production:
+
+npm run build
+
+
+Preview production build:
+
+npm run preview
+
+🧪 Linting
+
+Run ESLint to check for issues:
+
+npm run lint
+
+🎯 Purpose
+
+This portfolio is built to:
+
+Present my projects and technical skills
+
+Experiment with modern frontend tools
+
+Maintain a clean, scalable React codebase
+
+Serve as a personal brand and developer identity
+
+🚀 Deployment
+
+The project can be easily deployed on:
+
+Vercel
+
+Netlify
+
+GitHub Pages
+
+Cloudflare Pages
+
+🤝 Contributing
+
+This is a personal project, but suggestions and improvements are always welcome!
+Feel free to open an issue or submit a pull request.
+
+📄 License
+
+This project is open-source and available under the MIT License.
+
+👋 Connect With Me
+
+🌐 Portfolio: https://portfolio-shas.vercel.app/
+
+💼 LinkedIn: https://www.linkedin.com/in/shaswatasarkar/
+
+🐙 GitHub: https://github.com/Shaswata-codes/
+
+📧 Email: shaswatasarkar05@gmail.com
