@@ -46,7 +46,7 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           className="mb-20 text-center"
         >
-          <span className="block mb-4 text-sm font-semibold tracking-widest text-purple-400 uppercase">
+          <span className="block mb-4 text-sm font-semibold tracking-widest uppercase text-emerald-400">
             Selected Work
           </span>
 
@@ -54,7 +54,7 @@ const Projects = () => {
             Innovative Projects
           </h2>
 
-          <div className="w-32 h-1 mx-auto mb-6 bg-gradient-to-r from-purple-500 to-pink-500" />
+          <div className="w-32 h-1 mx-auto mb-6 bg-gradient-to-r from-emerald-500 to-cyan-500" />
 
           <p className="max-w-2xl mx-auto text-lg text-slate-400">
             Cutting-edge digital experiences that push boundaries and deliver results
@@ -73,7 +73,7 @@ const Projects = () => {
             <motion.div
               key={project.id}
               variants={cardVariants}
-              className="relative overflow-hidden border group rounded-2xl bg-slate-800/50 backdrop-blur-sm border-slate-700/50 hover:border-purple-500/50"
+              className="relative overflow-hidden border group rounded-2xl bg-slate-800/50 backdrop-blur-sm border-slate-700/50 hover:border-emerald-500/50"
             >
               <div className="relative overflow-hidden h-72">
                 <motion.img
@@ -85,7 +85,7 @@ const Projects = () => {
               </div>
 
               <div className="p-8">
-                <h3 className="mb-3 text-3xl font-bold text-white transition-colors group-hover:text-purple-300">
+                <h3 className="mb-3 text-3xl font-bold text-white transition-colors group-hover:text-emerald-300">
                   {project.title}
                 </h3>
 
@@ -94,7 +94,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ x: 6 }}
-                  className="flex items-center gap-2 font-semibold text-purple-400"
+                  className="flex items-center gap-2 font-semibold text-emerald-400"
                 >
                 View Project →
               </motion.a>

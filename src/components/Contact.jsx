@@ -18,29 +18,29 @@ const Contact = () => {
       title: 'Email',
       value: 'shaswatasarkar05@gmail.com',
       link: 'mailto:shaswatasarkar05@gmail.com',
-      color: '#9333EA'
+      color: '#00FF87'
     },
     {
       icon: FaPhone,
       title: 'Phone',
       value: '+91 9339014803',
       link: 'tel:+919339014803',
-      color: '#EC4899'
+      color: '#00E5FF'
     },
     {
       icon: FaMapMarkerAlt,
       title: 'Location',
       value: 'Bhubaneswar, India',
       link: null,
-      color: '#8B5CF6'
+      color: '#FFD700'
     }
   ];
 
   const socialLinks = [
-    { icon: FaGithub, link: 'https://github.com/Shaswata-codes', label: 'GitHub', color: '#181717' },
-    { icon: FaLinkedin, link: 'https://www.linkedin.com/in/shaswatasarkar/', label: 'LinkedIn', color: '#0A66C2' },
-    { icon: FaTwitter, link: 'https://twitter.com/yourusername', label: 'Twitter', color: '#1DA1F2' },
-    { icon: FaInstagram, link: 'https://www.instagram.com/sarkar_shas/', label: 'Instagram', color: '#E4405F' }
+    { icon: FaGithub, link: 'https://github.com/Shaswata-codes', label: 'GitHub', color: '#00FF87' },
+    { icon: FaLinkedin, link: 'https://www.linkedin.com/in/shaswatasarkar/', label: 'LinkedIn', color: '#00E5FF' },
+    { icon: FaTwitter, link: 'https://twitter.com/yourusername', label: 'Twitter', color: '#FFD700' },
+    { icon: FaInstagram, link: 'https://www.instagram.com/sarkar_shas/', label: 'Instagram', color: '#00FF87' }
   ];
 
   const handleChange = (e) => {
@@ -93,9 +93,9 @@ const Contact = () => {
         animate={{ opacity: 0.2 }}
         transition={{ duration: 1.5 }}
       >
-        <div className="absolute rounded-full top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 blur-3xl animate-pulse" />
+        <div className="absolute rounded-full top-1/4 left-1/4 w-96 h-96 bg-emerald-500/20 blur-3xl animate-pulse" />
         <div 
-          className="absolute rounded-full bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/20 blur-3xl animate-pulse" 
+          className="absolute rounded-full bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 blur-3xl animate-pulse" 
           style={{ animationDelay: '1s' }} 
         />
       </motion.div>
@@ -109,7 +109,7 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="mb-20 text-center"
         >
-          <span className="block mb-4 text-sm font-semibold tracking-widest text-purple-400 uppercase">
+          <span className="block mb-4 text-sm font-semibold tracking-widest uppercase text-emerald-400">
             Get In Touch
           </span>
 
@@ -117,7 +117,7 @@ const Contact = () => {
             Let's Talk
           </h2>
 
-          <div className="w-32 h-1 mx-auto mb-6 bg-gradient-to-r from-purple-500 to-pink-500" />
+          <div className="w-32 h-1 mx-auto mb-6 bg-gradient-to-r from-emerald-500 to-cyan-500" />
 
           <p className="max-w-2xl mx-auto text-lg text-slate-400">
             Have a project in mind or just want to chat? Feel free to reach out!
@@ -140,15 +140,15 @@ const Contact = () => {
                   key={info.title}
                   variants={itemVariants}
                   whileHover={{ scale: 1.02, x: 10 }}
-                  className="relative p-6 overflow-hidden transition-all duration-300 border group rounded-2xl bg-slate-800/50 backdrop-blur-sm border-slate-700/50 hover:border-purple-500/50"
+                  className="relative p-6 overflow-hidden transition-all duration-300 border group rounded-2xl bg-slate-800/50 backdrop-blur-sm border-slate-700/50 hover:border-emerald-500/50"
                 >
-                  <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 group-hover:opacity-100" />
+                  <div className="absolute inset-0 transition-opacity duration-500 opacity-0 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 group-hover:opacity-100" />
                   
                   <div className="relative z-10 flex items-center space-x-4">
                     <motion.div
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
-                      className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 to-pink-500/20"
+                      className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-cyan-500/20"
                     >
                       <info.icon 
                         className="w-7 h-7"
@@ -163,7 +163,7 @@ const Contact = () => {
                       {info.link ? (
                         <a 
                           href={info.link}
-                          className="text-lg font-medium text-white transition-colors hover:text-purple-400"
+                          className="text-lg font-medium text-white transition-colors hover:text-emerald-400"
                         >
                           {info.value}
                         </a>
@@ -204,7 +204,7 @@ const Contact = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 + index * 0.1, type: 'spring', stiffness: 200 }}
-                    className="flex flex-col items-center justify-center p-6 transition-all duration-300 border group rounded-2xl bg-slate-900/50 border-slate-700 hover:border-purple-500"
+                    className="flex flex-col items-center justify-center p-6 transition-all duration-300 border group rounded-2xl bg-slate-900/50 border-slate-700 hover:border-emerald-500"
                   >
                     <social.icon 
                       className="w-8 h-8 mb-2 transition-colors"
@@ -221,12 +221,12 @@ const Contact = () => {
             {/* Quote Box */}
             <motion.div
               variants={itemVariants}
-              className="p-8 border shadow-xl rounded-2xl bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm border-purple-500/30"
+              className="p-8 border shadow-xl rounded-2xl bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 backdrop-blur-sm border-emerald-500/30"
             >
               <p className="text-lg italic leading-relaxed text-slate-300">
                 "The best way to predict the future is to create it. Let's build something amazing together."
               </p>
-              <div className="w-20 h-1 mt-4 bg-gradient-to-r from-purple-500 to-pink-500" />
+              <div className="w-20 h-1 mt-4 bg-gradient-to-r from-emerald-500 to-cyan-500" />
             </motion.div>
           </motion.div>
 
@@ -262,7 +262,7 @@ const Contact = () => {
                     onBlur={() => setFocusedField(null)}
                     required
                     whileFocus={{ scale: 1.01 }}
-                    className="w-full px-5 py-4 text-white transition-all duration-300 border rounded-xl bg-slate-900/50 border-slate-600 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                    className="w-full px-5 py-4 text-white transition-all duration-300 border rounded-xl bg-slate-900/50 border-slate-600 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
                     placeholder=""
                   />
                 </div>
@@ -282,7 +282,7 @@ const Contact = () => {
                     onBlur={() => setFocusedField(null)}
                     required
                     whileFocus={{ scale: 1.01 }}
-                    className="w-full px-5 py-4 text-white transition-all duration-300 border rounded-xl bg-slate-900/50 border-slate-600 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                    className="w-full px-5 py-4 text-white transition-all duration-300 border rounded-xl bg-slate-900/50 border-slate-600 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
                     placeholder=""
                   />
                 </div>
@@ -302,7 +302,7 @@ const Contact = () => {
                     onBlur={() => setFocusedField(null)}
                     required
                     whileFocus={{ scale: 1.01 }}
-                    className="w-full px-5 py-4 text-white transition-all duration-300 border rounded-xl bg-slate-900/50 border-slate-600 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                    className="w-full px-5 py-4 text-white transition-all duration-300 border rounded-xl bg-slate-900/50 border-slate-600 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
                     placeholder="Project Inquiry"
                   />
                 </div>
@@ -322,7 +322,7 @@ const Contact = () => {
                     required
                     rows="6"
                     whileFocus={{ scale: 1.01 }}
-                    className="w-full px-5 py-4 text-white transition-all duration-300 border resize-none rounded-xl bg-slate-900/50 border-slate-600 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
+                    className="w-full px-5 py-4 text-white transition-all duration-300 border resize-none rounded-xl bg-slate-900/50 border-slate-600 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/50"
                     placeholder="Tell me about your project..."
                   />
                 </div>
@@ -332,17 +332,17 @@ const Contact = () => {
                   type="submit"
                   whileHover={{ 
                     scale: 1.02, 
-                    boxShadow: "0 20px 40px rgba(147, 51, 234, 0.4)" 
+                    boxShadow: "0 20px 40px rgba(0, 255, 135, 0.4)" 
                   }}
                   whileTap={{ scale: 0.98 }}
-                  className="relative w-full px-8 py-4 overflow-hidden font-bold text-white transition-all duration-300 shadow-lg group rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:shadow-2xl"
+                  className="relative w-full px-8 py-4 overflow-hidden font-bold transition-all duration-300 shadow-lg text-slate-900 group rounded-xl bg-gradient-to-r from-emerald-400 to-cyan-400 hover:shadow-2xl"
                 >
                   <span className="relative z-10 flex items-center justify-center">
                     Send Message
                     <FaPaperPlane className="ml-2 transition-transform duration-300 group-hover:translate-x-2 group-hover:-translate-y-1" />
                   </span>
                   <motion.div
-                    className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-r from-pink-600 to-purple-600 group-hover:opacity-100"
+                    className="absolute inset-0 transition-opacity duration-300 opacity-0 bg-gradient-to-r from-cyan-400 to-yellow-400 group-hover:opacity-100"
                     initial={false}
                   />
                 </motion.button>

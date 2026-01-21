@@ -38,7 +38,7 @@ const Header = () => {
               {navItems.map((item, index) => (
                 <motion.a key={item.label}
                 href={item.href}
-                className="relative group hover:text-neo-secondary"
+                className="relative group hover:text-cyan-400"
                 initial={{ opacity:0, y:-15}}
                 animate={{ opacity:1, y:0}}
                 transition={{type:"spring", stiffness:120, delay:0.1}}
@@ -52,7 +52,7 @@ const Header = () => {
               <motion.button
                 whileHover={{
                 scale: 1.06,
-                boxShadow: "0 0 20px rgba(110, 68, 255, .5)"
+                boxShadow: "0 0 20px rgba(0, 255, 135, .5)"
                 }}
                 className='px-6 py-2 font-semibold cursor-pointer dark:border-gray-300'
               >
@@ -63,7 +63,7 @@ const Header = () => {
               transition={{type:"spring", stiffness:200}}
               className='flex items-center justify-center w-10 h-10 rounded-full dark:glass'>
                 {isDark?
-                (<FiSun className='w-6 h-6 text-yellow-300' />):(<FiMoon className='w-6 h-6 text-neo-dark' />)}
+                (<FiSun className='w-6 h-6 text-yellow-400' />):(<FiMoon className='w-6 h-6 text-neo-dark' />)}
                 
               </motion.button>
 
@@ -78,7 +78,7 @@ const Header = () => {
               transition={{type:"spring", stiffness:200}}
               className='flex items-center justify-center w-10 h-10 rounded-full dark:glass'>
                 {isDark?
-                (<FiSun className='w-6 h-6 text-yellow-300' />):(<FiMoon className='w-6 h-6 text-neo-dark' />)}
+                (<FiSun className='w-6 h-6 text-yellow-400' />):(<FiMoon className='w-6 h-6 text-neo-dark' />)}
                 
               </motion.button>
               <button onClick={()=>setmobileMenuOpen(true)} className='p-2 rounded-full lg:hidden glass dark:glass'>
@@ -105,7 +105,7 @@ const Header = () => {
               <motion.a
               key={item.label}
               href={item.href}
-              className="block text-4xl font-bold hover:text-neo-secondary"
+              className="block text-4xl font-bold hover:text-cyan-400"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}

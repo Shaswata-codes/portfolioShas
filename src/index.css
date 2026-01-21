@@ -10,11 +10,11 @@ html {
 }
 
 @theme {
-  --color-neo-primary: #6E44FF;
-  --color-neo-secondary: #B892FF;
-  --color-neo-accent: #FF44B4;
-  --color-neo-dark: #0A0A1A;
-  --color-neo-light: #F0F0FF;
+  --color-neo-primary: #00FF87;
+  --color-neo-secondary: #00E5FF;
+  --color-neo-accent: #FFD700;
+  --color-neo-dark: #0D0208;
+  --color-neo-light: #FAFFFD;
 
   --gradient-start: var(--color-neo-primary);
   --gradient-middle: var(--color-neo-secondary);
@@ -67,9 +67,9 @@ html {
 ========================= */
 
 html.dark {
-  --gradient-start: #FF44B4;
-  --gradient-middle: #6E44FF;
-  --gradient-end: #B892FF;
+  --gradient-start: #FFD700;
+  --gradient-middle: #00FF87;
+  --gradient-end: #00E5FF;
   background-color: var(--color-neo-dark);
   color: var(--color-neo-light);
 }
@@ -156,7 +156,7 @@ body {
 ========================= */
 
 .grid-pattern {
-  background-color: #F0F0FF;
+  background-color: #FAFFFD;
   background-image:
     linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
@@ -165,10 +165,9 @@ body {
 }
 
 html.dark .grid-pattern {
-  background-color: #0A0A1A;
+  background-color: #0D0208;
   background-image:
     linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
   color: var(--color-text);
 }
-
